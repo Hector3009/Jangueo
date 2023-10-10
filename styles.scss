@@ -1,0 +1,55 @@
+//Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+
+// Optional
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type"; 
+
+//Cambio colores Bootstrap
+$blue:    #F2AE30;
+$primary: #F2AE30;
+$dark: #0D0D0D;
+$body: #F2F2F2;
+$theme-colors: (
+  "primary": $primary,
+  "danger": $dark,
+  "body":$body,
+  "blue":$blue,
+);
+
+
+
+// Create your own map
+$custom-colors: (
+  "black2": #0D0D0D,
+  "orangedark": #F2AE30,
+  "brown2":#402A01,
+  "yellow2":#F2C12E, 
+  "nlight":#F2F2F2,
+  "greenWhats":#25D366,
+  "facebookBlue":#4267B2,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+//Masonry
+.mas-naranja{
+  background-color: #F2AE30;
+}
+.mas-blak{
+  background-color: #0D0D0D;
+  opacity: .8;
+}
+
+//Fuente
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans:400,600,700');
+
+//Action
+@import "./node_modules/bootstrap/scss/bootstrap.scss";

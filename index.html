@@ -17,10 +17,10 @@
   <link rel="icon" type="image/x-icon" href="imgs/favicon-192x192.png" />
 </head>
 <body class="bg-body">
-  
-  <header class="p-3 text-bg-dark bg-black">
+  <!--Navbar-->
+  <header class="navbar sticky-top p-3 text-bg-dark bg-black ">
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <div class="d-flex  flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <img src="imgs/jangueo.png" alt="logotipo jangueo bar" class="bi me-2" width="60" height="52" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
         </a>
@@ -181,6 +181,12 @@
         <!-- <video src="video/diversion.mp4" class="object-fit-contain border rounded align-content-center col-lg-12 col-md-10 col-sm-12 col-xs-12" autoplay loop></video> -->
         <p class=" text-body-emphasis col-lg-12 col-md-10 col-sm-12 col-xs-12 mx-auto lead " >
           "Estamos comprometidos en llevar tus sentidos a un viaje lleno de sabor y diversión."
+          <div class="col-md-8 d-inline-flex justify-content-center">
+            <div class="h-100 p-5 text-white bg-dark rounded-3" >
+              <h2 class="pb-2">Te atendemos de:</h2>
+              <h1>1:00 pm <br>a <br> 11:30 pm</h1> <script> drawClock();</script>
+            </div>
+          </div>
         </p>
         
       </div>
@@ -528,7 +534,16 @@
           <li><a href="#catalogo" class="nav-link px-2 text-secondary">Catalogo</a></li>
     </ul>
   </footer>
-
+ <!--Scryps-->
+ <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      let radius = canvas.height / 2;
+      ctx.translate(radius, radius);
+      radius = radius * 0.90
+      drawClock();
+      setInterval(drawClock, 1000);
+ </script>
   <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
